@@ -1,11 +1,12 @@
 :root {
-  --primary: #0f172a;
-  --accent: #38bdf8;
+  --primary: #055C97;
+  --white: #fff;
+  --black: #0f0f0f;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #0b1220;
-  color: #e5e7eb;
+  font-family: 'Roboto Mono', monospace;
+  background: #0F0F0F;
+  color: var(--white);
 }
