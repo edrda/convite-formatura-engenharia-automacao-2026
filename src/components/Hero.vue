@@ -2,16 +2,16 @@
 import { ref, onMounted } from 'vue'
 import { useFormando } from '../utils/useFormando'
 
-import turma1 from '../assets/images/turma/turma1_compressed.webp'
-import turma2 from '../assets/images/turma/turma2_compressed.webp'
-import turma3 from '../assets/images/turma/turma3_compressed.webp'
-import turma4 from '../assets/images/turma/turma4_compressed.webp'
-import turma5 from '../assets/images/turma/turma5_compressed.webp'
-import turma6 from '../assets/images/turma/turma6_compressed.webp'
-import turma7 from '../assets/images/turma/turma7_compressed.webp'
-import turma8 from '../assets/images/turma/turma8_compressed.webp'
-import turma9 from '../assets/images/turma/turma9_compressed.webp'
-import turma10 from '../assets/images/turma/turma10_compressed.webp'
+import turma1 from '/images/turma/turma1_compressed.webp' 
+import turma2 from '/images/turma/turma2_compressed.webp'
+import turma3 from '/images/turma/turma3_compressed.webp'
+import turma4 from '/images/turma/turma4_compressed.webp'
+import turma5 from '/images/turma/turma5_compressed.webp'
+import turma6 from '/images/turma/turma6_compressed.webp'
+import turma7 from '/images/turma/turma7_compressed.webp'
+import turma8 from '/images/turma/turma8_compressed.webp'
+import turma9 from '/images/turma/turma9_compressed.webp'
+import turma10 from '/images/turma/turma10_compressed.webp'
 
 const { formandoAtual } = useFormando()
 

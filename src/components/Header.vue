@@ -2,8 +2,8 @@
 import { useFormando } from "../utils/useFormando";
 import ConfirmPresenceButton from "../components/buttons/ConfirmPresenceButton.vue";
 
-import furgLogo from "../assets/images/furg-logo.png";
-import c3Logo from "../assets/images/c3-logo.png";
+import furgLogo from "/images/furg-logo.png";
+import c3Logo from "/images/c3-logo.png";
 
 const { formandoAtual } = useFormando();
 </script>

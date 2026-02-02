@@ -18,7 +18,7 @@ export const formandos: Record<string, Formando> = {
     bio: 'Apaixonada pelo espaço, gatinhos e academia.',
     descricao: 'Sonho em trabalhar com sistemas espaciais e satélites. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
     fotos: [
-      '/src/assets/images/formandos/rafaella/rafaella.png'
+      '/images/formandos/rafaella/rafaella.png'
     ],
     whatsapp: 'https://wa.me/5551999999999'
   },
@@ -31,7 +31,7 @@ export const formandos: Record<string, Formando> = {
     bio: 'Focado em controle industrial e sistemas embarcados.',
     descricao: 'Desejo contribuir para a automação de processos industriais. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
     fotos: [
-      '/src/assets/images/formandos/gabriel/gabriel.png'
+      '/images/formandos/gabriel/gabriel.png'
     ],
     whatsapp: 'https://wa.me/5551988888888'
   }
