@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useFormando } from "../utils/useFormando";
-import { CircleCheckBig } from "lucide-vue-next";
+import ConfirmPresenceButton from "../components/buttons/ConfirmPresenceButton.vue";
 
 import furgLogo from "../assets/images/furg-logo.png";
 import c3Logo from "../assets/images/c3-logo.png";
@@ -11,7 +11,7 @@ const { formandoAtual } = useFormando();
 <template>
   <header class="header">
     <div class="left">
-      <img :src="furgLogo" alt="FURG" class="logo" />
+      <img :src="furgLogo" alt="FURG" class="logo furg" />
       <img :src="c3Logo" alt="C3" class="logo" />
     </div>
 
@@ -21,10 +21,7 @@ const { formandoAtual } = useFormando();
     </div>
 
     <div class="right" v-if="formandoAtual">
-      <a :href="formandoAtual.whatsapp" target="_blank" class="confirm-btn">
-        <CircleCheckBig />
-        Confirmar presença
-      </a>
+      <ConfirmPresenceButton />
     </div>
   </header>
 </template>
@@ -58,6 +55,11 @@ const { formandoAtual } = useFormando();
 .logo {
   height: 36px;
   width: auto;
+}
+
+img.logo.furg {
+  border-right: 1px solid var(--white);
+  padding-right: 10px;
 }
 
 .center {

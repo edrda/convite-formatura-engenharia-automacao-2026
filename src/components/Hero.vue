@@ -2,16 +2,16 @@
 import { ref, onMounted } from 'vue'
 import { useFormando } from '../utils/useFormando'
 
-import turma1 from '../assets/images/turma/turma1.jpg'
-import turma2 from '../assets/images/turma/turma2.jpg'
-import turma3 from '../assets/images/turma/turma3.jpg'
-import turma4 from '../assets/images/turma/turma4.jpg'
-import turma5 from '../assets/images/turma/turma5.jpg'
-import turma6 from '../assets/images/turma/turma6.jpg'
-import turma7 from '../assets/images/turma/turma7.jpg'
-import turma8 from '../assets/images/turma/turma8.jpg'
-import turma9 from '../assets/images/turma/turma9.jpg'
-import turma10 from '../assets/images/turma/turma10.jpg'
+import turma1 from '../assets/images/turma/turma1_compressed.webp'
+import turma2 from '../assets/images/turma/turma2_compressed.webp'
+import turma3 from '../assets/images/turma/turma3_compressed.webp'
+import turma4 from '../assets/images/turma/turma4_compressed.webp'
+import turma5 from '../assets/images/turma/turma5_compressed.webp'
+import turma6 from '../assets/images/turma/turma6_compressed.webp'
+import turma7 from '../assets/images/turma/turma7_compressed.webp'
+import turma8 from '../assets/images/turma/turma8_compressed.webp'
+import turma9 from '../assets/images/turma/turma9_compressed.webp'
+import turma10 from '../assets/images/turma/turma10_compressed.webp'
 
 const { formandoAtual } = useFormando()
 
@@ -72,7 +72,7 @@ onMounted(() => {
   bottom: 0;
   left: 0;
   width: 690px;
-  height: 221px;
+  height: 170px;
   padding: 1.5rem 2rem;
   background: linear-gradient(
     90deg,
@@ -91,10 +91,17 @@ onMounted(() => {
 
 @media (max-width: 900px) {
   .overlay-card {
-    width: calc(100% - 2rem);
-    left: 1rem;
-    right: 1rem;
-    height: auto;
+    width: 76%;
+    height: 94px;
+    left: -10px;
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
+  .hero {
+    height: 40vh;}
+
 }
 </style>

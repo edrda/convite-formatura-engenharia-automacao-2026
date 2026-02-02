@@ -6,10 +6,10 @@ const formandoAtual = ref<Formando | null>(null)
 export function useFormando() {
   function carregarFormando() {
     const params = new URLSearchParams(window.location.search)
-    const aluno = params.get('aluno')
+    const formando = params.get('formando')
 
-    if (aluno && formandos[aluno]) {
-      formandoAtual.value = formandos[aluno]
+    if (formando && formandos[formando]) {
+      formandoAtual.value = formandos[formando]
     } else {
       formandoAtual.value = null
     }
