@@ -25,13 +25,13 @@ const { formandoAtual } = useFormando();
   gap: 0.75rem;
 
   padding: 0.9rem 1.6rem;
-  border-radius: 999px;
+  border-radius: 24px;
 
   background-color: #ffffff;
   color: var(--primary);
 
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 18px;
   text-decoration: none;
 
   transition:

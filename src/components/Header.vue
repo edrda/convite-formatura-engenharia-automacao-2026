@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useFormando } from "../utils/useFormando";
 import ConfirmPresenceButton from "../components/buttons/ConfirmPresenceButton.vue";
+import { GraduationCap } from 'lucide-vue-next';
 
 import furgLogo from "/images/furg-logo.png";
 import c3Logo from "/images/c3-logo.png";
@@ -18,7 +19,7 @@ const { formandoAtual } = useFormando();
     <div class="center" v-if="formandoAtual">
       <h1>
         Você recebeu um convite de
-      <strong>{{ formandoAtual.primeiroNome }}</strong>
+      <strong>{{ formandoAtual.primeiroNome }}</strong> <GraduationCap :size="14" style="margin-left: -6px;"/>
       </h1>
       
     </div>
@@ -50,8 +51,8 @@ const { formandoAtual } = useFormando();
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 16px !important;
   line-height: 40px;
   color: var(--white);
 }

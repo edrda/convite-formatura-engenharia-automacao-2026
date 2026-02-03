@@ -20,7 +20,7 @@ export const formandos: Record<string, Formando> = {
     fotos: [
       '/images/formandos/rafaella/rafaella.png'
     ],
-    whatsapp: 'https://wa.me/5551999999999'
+    whatsapp: 'https://wa.me/5553991487704?text=Oi%2C%20Rafa!%20Recebi%20seu%20convite%20e%20gostaria%20de%20confirmar%20a%20minha%20presen%C3%A7a%20na%20sua%20formatura.%20%0ADia%2007%2F03%2F2026%20%C3%A0s%2017h%2C%20no%20CIDEC.'
   },
 
   gabriel: {
@@ -33,6 +33,6 @@ export const formandos: Record<string, Formando> = {
     fotos: [
       '/images/formandos/gabriel/gabriel.png'
     ],
-    whatsapp: 'https://wa.me/5551988888888'
+    whatsapp: 'https://wa.me/5553981609938?text=Oi%2C%20Gabriel!%20Recebi%20seu%20convite%20e%20gostaria%20de%20confirmar%20a%20minha%20presen%C3%A7a%20na%20sua%20formatura.%20%0ADia%2007%2F03%2F2026%20%C3%A0s%2017h%2C%20no%20CIDEC.'
   }
 }
