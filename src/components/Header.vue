@@ -16,8 +16,11 @@ const { formandoAtual } = useFormando();
     </div>
 
     <div class="center" v-if="formandoAtual">
-      Você recebeu um convite de
+      <h1>
+        Você recebeu um convite de
       <strong>{{ formandoAtual.primeiroNome }}</strong>
+      </h1>
+      
     </div>
 
     <div class="right" v-if="formandoAtual">
@@ -44,6 +47,13 @@ const { formandoAtual } = useFormando();
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: var(--white);
 }
 
 .left {
