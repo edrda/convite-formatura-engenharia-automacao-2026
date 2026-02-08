@@ -30,6 +30,14 @@ const imagensTurma = [
 
 const slideAtual = ref(0)
 
+const offset = ref(0)
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    offset.value = window.scrollY * 0.3
+  })
+})
+
 onMounted(() => {
   setInterval(() => {
     slideAtual.value = (slideAtual.value + 1) % imagensTurma.length
@@ -41,7 +49,10 @@ onMounted(() => {
   <section class="hero" v-if="formandoAtual">
     <div
       class="slide"
-      :style="{ backgroundImage: `url(${imagensTurma[slideAtual]})` }"
+      :style="{
+      backgroundImage: `url(${imagensTurma[slideAtual]})`,
+      transform: `translateY(${offset}px)`
+    }"
     />
 
     <div class="overlay-card">

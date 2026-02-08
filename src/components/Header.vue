@@ -5,12 +5,25 @@ import { GraduationCap } from 'lucide-vue-next';
 
 import furgLogo from "/images/furg-logo.png";
 import c3Logo from "/images/c3-logo.png";
+import { ref, onMounted } from "vue";
 
 const { formandoAtual } = useFormando();
+
+const progress = ref(0)
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement
+    progress.value = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100
+  })
+})
+
 </script>
 
 <template>
   <header class="header">
+    <div class="progress" :style="{ width: progress + '%' }" />
+
     <div class="left">
       <img :src="furgLogo" alt="FURG" class="logo furg" />
       <img :src="c3Logo" alt="C3" class="logo" />
@@ -31,6 +44,15 @@ const { formandoAtual } = useFormando();
 </template>
 
 <style scoped>
+.progress {
+  position: fixed;
+  top:0;
+  left:0;
+  height:3px;
+  background:#055C97;
+  z-index:2000;
+}
+
 .header {
   position: fixed;
   top: 0;

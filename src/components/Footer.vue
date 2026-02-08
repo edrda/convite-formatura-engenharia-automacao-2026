@@ -45,5 +45,20 @@ span {
   .center {
     display: none;
   }
+
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    gap: 12px;
+  }
+  span {
+    font-size: 14px;
+  }
+
+  .confirm-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 12px;
+  }
 }
 </style>

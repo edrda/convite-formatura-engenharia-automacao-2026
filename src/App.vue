@@ -5,6 +5,8 @@
   <FormandoCard />
   <EventSchedule />
   <FormandosSection />
+  <HonoreesSection />
+  <HonoredPeopleSection />
 
   <Footer />
   
@@ -17,5 +19,7 @@ import Juramento from './components/Juramento.vue'
 import FormandoCard from './components/FormandoCard.vue';
 import EventSchedule from './components/EventSchedule.vue';
 import FormandosSection from './components/FormandosSection.vue';
+import HonoreesSection from './components/HonoreesSection.vue';
 import Footer from './components/Footer.vue';
+import HonoredPeopleSection from './components/HonoredPeopleSection.vue';
 </script>

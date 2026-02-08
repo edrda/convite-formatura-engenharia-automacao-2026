@@ -9,4 +9,11 @@ body {
   font-family: 'Roboto Mono', monospace;
   background: #0F0F0F;
   color: var(--white);
+  
+  animation: fadePage .8s ease;
+}
+
+@keyframes fadePage {
+  from { opacity:0 }
+  to { opacity:1 }
 }

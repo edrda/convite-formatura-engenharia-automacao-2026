@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import SectionHeader from './ui/SectionHeader.vue'
+import { useReveal } from '../composables/useReveal'
+
+
+const titulo = 'OS FORMANDOS'
+
+
 const formandos = [
   {
     nome: "Fernando P.M.",
@@ -47,7 +54,9 @@ const formandos = [
   <section class="formandos">
     <header class="formandos-header">
       <span class="line" />
-      <h2>OS FORMANDOS</h2>
+      
+      <SectionHeader :title="titulo" />
+
       <span class="line" />
     </header>
 
@@ -55,7 +64,7 @@ const formandos = [
       <article
         v-for="formando in formandos"
         :key="formando.nome"
-        class="card"
+        class="card show"
         :style="{
           backgroundImage: `url(/images/turma/${formando.img})`,
         }"
@@ -73,27 +82,6 @@ const formandos = [
 .formandos {
   padding: 4rem 2rem;
   background: #0b0b0b;
-}
-
-.formandos-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.formandos-header h2 {
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.4rem;
-  letter-spacing: 0.2em;
-}
-
-.line {
-  flex: 1;
-  max-width: 120px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .grid {
@@ -116,10 +104,19 @@ const formandos = [
   transition: transform 0.25s ease;
   max-width: 208px;
   height: 304px;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .6s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
+}
+
+.card.show {
+  opacity: 1;
+  transform: none;
 }
 
 .info {
@@ -138,7 +135,6 @@ const formandos = [
   opacity: 0.85;
 }
 
-/* RESPONSIVO */
 @media (max-width: 900px) {
   .grid {
     padding: 0;
@@ -153,6 +149,10 @@ const formandos = [
   .card {
     width: 100%;
     min-height: 300px;
+  }
+
+  .formandos-header h2 {
+    font-size: 22px;
   }
 }
 </style>
