@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SectionHeader from './ui/SectionHeader.vue'
-import { useReveal } from '../composables/useReveal'
+// import { useReveal } from '../composables/useReveal'
 
 
 const homenageados = [

@@ -9,7 +9,7 @@ defineProps<{
   foto: string
 }>()
 
-const { el, visible } = useReveal()
+const { visible } = useReveal()
 </script>
 
 <template>
