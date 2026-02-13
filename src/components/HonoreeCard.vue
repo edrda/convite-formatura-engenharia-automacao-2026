@@ -82,6 +82,7 @@ const { visible } = useReveal()
   font-size: 18px;
   line-height: 1.6;
   margin: 0;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {

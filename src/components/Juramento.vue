@@ -8,9 +8,9 @@
       Com meu conhecimento cientifico e tecnológico, buscarei contribuir para o
       desenvolvimento socialmente justo do Brasil e para prosperidade da
       humanidade”
-      <br /><br />
-      ASSIM JURO
     </p>
+    <br />
+    <span> ASSIM JURO </span>
   </section>
 </template>
 
@@ -21,8 +21,14 @@
   max-width: 1200px;
   font-size: 28px;
   line-height: 45px;
-  text-align: center;
+  text-align: justify;
   background-color: var(--black);
+
+  span {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 900px) {

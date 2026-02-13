@@ -16,7 +16,7 @@ export const formandos: Record<string, Formando> = {
     primeiroNome: 'Rafaella',
     nacionalidade: 'Rio Grande/RS',
     bio: 'Apaixonada pelo espaço, gatinhos e academia.',
-    descricao: 'Sonho em trabalhar com sistemas espaciais e satélites. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+    descricao: 'Para quem sempre olhou para o céu buscando respostas, a engenharia de automação foi o meu ponto de partida. Me encantei pela versatilidade de uma área que se faz presente desde a precisão de um marca-passo até um voo a mil pés de altura. Levo como lema, após os anos de graduação, que a automação não existe para substituir o ser humano, mas para ser a ferramenta que potencializa nossa capacidade de cuidar, proteger e ir além. Inicio minha carreira com o saber de que a tecnologia precisa estar aliada à ética e ao compromisso de ser uma eterna aprendiz, transformando cada novo desafio em um degrau para a excelência. Sou a soma dos meus estudos, das pessoas (e pets) que amo, e sem sombra de dúvidas, da vontade incessante de saber os porquês. Dito isso, o céu não é o limite; é o meu próximo objetivo.',
     fotos: [
       '/images/formandos/rafaella/rafaella.png'
     ],
@@ -29,7 +29,7 @@ export const formandos: Record<string, Formando> = {
     primeiroNome: 'Gabriel',
     nacionalidade: 'Rio Grande/RS',
     bio: 'Focado em controle industrial e sistemas embarcados.',
-    descricao: 'Desejo contribuir para a automação de processos industriais. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+    descricao: 'Movido pela curiosidade, trilhei meu caminho na EAUTO com uma paixão pela inovação. Entre linhas de código e desenvolvimento de sistemas, descobri que a engenharia vai além da técnica: trata-se de criar soluções que impactam vidas. Entusiasta da robótica e das infinitas possibilidades tecnológicas, encontrei nesse percurso o meu propósito. Acredito no poder da automação para simplificar o complexo e, ao me formar, celebro anos de dedicação. Dou início agora a uma carreira pautada pela ética, pela inovação e pelo constante desejo de evoluir.',
     fotos: [
       '/images/formandos/gabriel/gabriel.png'
     ],

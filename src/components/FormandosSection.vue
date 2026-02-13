@@ -1,10 +1,28 @@
 <script setup lang="ts">
-import SectionHeader from './ui/SectionHeader.vue'
-// import { useReveal } from '../composables/useReveal'
+import SectionHeader from "./ui/SectionHeader.vue";
+import { onMounted, ref } from "vue";
+
+const sectionRef = ref<HTMLElement | null>(null);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
+});
 
 
-const titulo = 'OS FORMANDOS'
-
+const titulo = "OS FORMANDOS";
 
 const formandos = [
   {
@@ -48,13 +66,28 @@ const formandos = [
     img: "vitor_estudio.webp",
   },
 ];
+
+const formandosSemFoto = [
+  {
+    nome: "Rodrigo K.",
+    local: "Rio Grande/RS",
+  },
+  {
+    nome: "Thiago F. S. O.",
+    local: "Rio Grande/RS",
+  },
+  {
+    nome: "Pedro H. M. L.",
+    local: "Cordeirópolis/SP",
+  },
+];
 </script>
 
 <template>
-  <section class="formandos">
+  <section ref="sectionRef" class="formandos">
     <header class="formandos-header">
       <span class="line" />
-      
+
       <SectionHeader :title="titulo" />
 
       <span class="line" />
@@ -75,6 +108,17 @@ const formandos = [
         </div>
       </article>
     </div>
+
+    <div class="extra-row">
+      <div
+        v-for="formando in formandosSemFoto"
+        :key="formando.nome"
+        class="extra-card"
+      >
+        <strong>{{ formando.nome }}</strong>
+        <span>{{ formando.local }}</span>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -82,6 +126,15 @@ const formandos = [
 .formandos {
   padding: 4rem 2rem;
   background: #0b0b0b;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.formandos.visible {
+  opacity: 1;
+  transform: none;
 }
 
 .grid {
@@ -106,18 +159,52 @@ const formandos = [
   height: 304px;
 
   opacity: 0;
-  transform: translateY(30px);
-  transition: .6s ease;
+  transform: translateY(20px);
+  transition:
+    transform 0.4s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.4s ease;
+  will-change: transform;
 }
 
-.card:hover {
-  transform: translateY(-4px);
+@media (hover: hover) and (pointer: fine) {
+
+  .card {
+    transform-style: preserve-3d;
+  }
+
+  .card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    transition-delay: .1s;
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.15), transparent 60%);
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
+
+  .card:hover::after {
+    opacity: 1;
+  }
 }
 
-.card.show {
+.formandos.visible .card.show {
   opacity: 1;
-  transform: none;
+  transition: opacity .3s ease, transform .6s ease;
 }
+
+/* .formandos.visible .card:nth-child(1) { transition-delay: .1s; }
+.formandos.visible .card:nth-child(2) { transition-delay: .2s; }
+.formandos.visible .card:nth-child(3) { transition-delay: .3s; }
+.formandos.visible .card:nth-child(4) { transition-delay: .4s; }
+.formandos.visible .card:nth-child(5) { transition-delay: .5s; }
+.formandos.visible .card:nth-child(6) { transition-delay: .6s; }
+.formandos.visible .card:nth-child(7) { transition-delay: .7s; }
+.formandos.visible .card:nth-child(8) { transition-delay: .8s; } */
 
 .info {
   width: 100%;
@@ -135,6 +222,42 @@ const formandos = [
   opacity: 0.85;
 }
 
+.extra-row {
+  margin-top: 3rem;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.extra-card {
+  min-width: 180px;
+  padding: 16px 12px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 1), rgba(0, 0, 0, 1));
+  text-align: left;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.extra-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.extra-card strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.extra-card span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
 @media (max-width: 900px) {
   .grid {
     padding: 0;
@@ -149,10 +272,41 @@ const formandos = [
   .card {
     width: 100%;
     min-height: 300px;
+    animation: mobileFloat 6s ease-in-out infinite;
+  }
+
+  .card:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+  .card:nth-child(3) {
+    animation-delay: 2s;
+  }
+
+  .card:nth-child(4) {
+    animation-delay: 3s;
   }
 
   .formandos-header h2 {
     font-size: 22px;
   }
+
+  .extra-row {
+    gap: 22px;
+    margin-top: 1rem;
+  }
 }
+
+@keyframes mobileFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 </style>

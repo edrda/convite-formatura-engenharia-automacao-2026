@@ -92,6 +92,7 @@ const { formandoAtual, existeFormando } = useFormando();
   font-size: 0.95rem;
   line-height: 1.6;
   max-width: 420px;
+  text-align: justify;
 }
 
 .invite {
