@@ -22,7 +22,7 @@ const homenageados = [
   {
     nome: 'Rodrigo Guerra',
     cargo: 'Professor Homenageado',
-    foto: '/images/homenageados/rodrigo-guerra.webp'
+    foto: '/images/homenageados/rodrigo-guerra.jpeg'
   },
   {
     nome: 'Vinniccius Menezes',
