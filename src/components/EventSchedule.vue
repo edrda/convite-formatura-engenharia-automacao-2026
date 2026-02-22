@@ -87,13 +87,14 @@ const downloadICS = () => {
 
 .schedule-btn {
     cursor: pointer;
-    background: var(--white);
-    color: var(--primary);
-    border-radius: 8px;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 20px;
     padding: 8px 16px;
     max-width: 190px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     transition:
     transform 0.2s ease,

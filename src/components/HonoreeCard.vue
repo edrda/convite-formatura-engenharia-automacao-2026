@@ -6,6 +6,7 @@ defineProps<{
   titulo: string
   nome: string
   descricao: string
+  assinatura: string
   foto: string
 }>()
 
@@ -26,6 +27,10 @@ const { visible } = useReveal()
       <div class="text">
         <h3>{{ nome }}</h3>
         <p>{{ descricao }}</p>
+        <div class="assinatura">
+          <span>{{ assinatura }}</span>
+        </div>
+        
       </div>
     </div>
   </section>
@@ -61,7 +66,8 @@ const { visible } = useReveal()
 }
 
 .photo {
-  width: 282px;
+  width: 300px;
+  height: 560px;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -83,6 +89,14 @@ const { visible } = useReveal()
   line-height: 1.6;
   margin: 0;
   text-align: justify;
+}
+
+.assinatura {
+  margin-top: 2rem;
+  font-style: italic;
+  text-align: right;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 768px) {
