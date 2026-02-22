@@ -105,7 +105,8 @@ const homenageados = [
     grid-template-columns: repeat(2, 1fr);
   }
   .card img {
-    height: 500px;
+    height: 460px;
+    width: 300px;
   }
 }
 

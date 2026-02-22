@@ -107,7 +107,8 @@ const { visible } = useReveal()
   }
 
   .photo {
-    width: 260px;
+    width: 330px;
+    height: 400px;
   }
 
   .honoree-header h2 {
